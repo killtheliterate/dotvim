@@ -16,3 +16,6 @@
 [submodule "bundle/eunuch"]
 	path = bundle/eunuch
 	url = git://github.com/tpope/vim-eunuch.git
+[submodule "bundle/indentguides"]
+	path = bundle/indentguides
+	url = git://github.com/nathanaelkane/vim-indent-guides.git
