@@ -164,7 +164,7 @@ set hidden
 ""
 
 "" YankRing
-let g:yankring_history_dir = '~/Dropbox/backups/vim-backups/yankring.txt'
+let g:yankring_history_dir = '~/Dropbox/backups/vim-backups/yankring/'
 
 "" Indent Guides
 let g:indent_guides_enable_on_vim_startup = 1
