@@ -17,3 +17,4 @@
 
 ## Notes
 * Ctrl-[ is how you get outta the : thingy mode
+* For learning about SnipMate --> http://vimeo.com/3535418

@@ -70,6 +70,25 @@ set hlsearch
 set ignorecase
 set smartcase
 
+"" GUI
+let g:solarized_termtrans = 1
+colorscheme solarized
+set guifont=Inconsolata\ for\ Powerline:h14
+set guioptions=aAce
+if has('gui_running')
+  set go-=T
+  if has("autocmd")
+    autocmd VimEnter * NERDTree
+    autocmd Vimenter * wincmd p
+  endif
+else
+  set mouse=a
+endif
+
+if exists("g:enable_mvim_shift_arrow")
+  let macvim_hig_shift_movement = 1 " mvim shift-arrow-keys
+endif
+
 "" At least let yourself know what mode you're in
 set showmode
 
@@ -103,11 +122,8 @@ imap ,<tab> <C-x><C-o>
 "" map escape key to jj -- much faster
 imap jj <esc>
 
-" set text wrapping toggles
+"" set text wrapping toggles
 nmap <silent> <leader>tw :set invwrap<CR>:set wrap?<CR>
-
-
-hi MatchParen cterm=bold ctermbg=darkmagenta ctermfg=white
 
 "" find merge conflict markers
 nmap <silent> <leader>fc <ESC>/\v^[<=>]{7}( .*\|$)<CR>
@@ -118,24 +134,8 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
-"" GUI
-let g:solarized_termtrans = 1
-colorscheme solarized
-set guifont=Inconsolata\ for\ Powerline:h14
-set guioptions=aAce
-if has('gui_running')
-  set go-=T
-  if has("autocmd")
-    autocmd VimEnter * NERDTree
-    autocmd Vimenter * wincmd p
-  endif
-else
-  set mouse=a
-endif
-
-if exists("g:enable_mvim_shift_arrow")
-  let macvim_hig_shift_movement = 1 " mvim shift-arrow-keys
-endif
+"" Highlight brackets
+hi MatchParen cterm=bold ctermbg=darkmagenta ctermfg=white
 
 "" yank text to the OS X clipboard
 set clipboard=unnamed
@@ -147,7 +147,6 @@ noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 
 "" Drupal line length
 set colorcolumn=80
-
 
 "" spellcheck
 map <leader>ss :setlocal spell!<cr>
@@ -164,8 +163,6 @@ nnoremap k gk
 
 "" switch buffers without saving
 set hidden
-
-
 
 ""
 "" Plugins
@@ -193,8 +190,9 @@ let g:Powerline_symbols = 'fancy'
 "" Syntastic + DrupalCS
 let g:syntastic_phpcs_conf=" --standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
 
+""
 "" Reload .vimrc after editing and saving
+""
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
-
