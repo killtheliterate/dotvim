@@ -34,6 +34,3 @@
 [submodule "bundle/autoclose"]
 	path = bundle/autoclose
 	url = git://github.com/Townk/vim-autoclose.git
-[submodule "bundle/yankring"]
-	path = bundle/yankring
-	url = git://github.com/vim-scripts/YankRing.vim.git

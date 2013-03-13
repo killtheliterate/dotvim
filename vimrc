@@ -1,3 +1,8 @@
+"" I found this on the internet
+"" http://net.tutsplus.com/articles/general/top-10-pitfalls-when-switching-to-vim/
+"" https://github.com/carlhuda/janus
+"" http://xkcd.com/1172/
+
 "" PATHOGEN!!!!!!!!!!!!!!
 execute pathogen#infect()
 
@@ -101,6 +106,9 @@ imap jj <esc>
 " set text wrapping toggles
 nmap <silent> <leader>tw :set invwrap<CR>:set wrap?<CR>
 
+
+hi MatchParen cterm=bold ctermbg=darkmagenta ctermfg=white
+
 "" find merge conflict markers
 nmap <silent> <leader>fc <ESC>/\v^[<=>]{7}( .*\|$)<CR>
 
@@ -163,10 +171,6 @@ set hidden
 "" Plugins
 ""
 
-"" YankRing
-let g:yankring_history_dir = '~/Dropbox/backups/vim-backups/yankring/'
-nnoremap <silent> <F11> :YRShow<CR>
-
 "" Indent Guides
 let g:indent_guides_enable_on_vim_startup = 0
 let g:indent_guides_color_change_percent = 5
@@ -193,3 +197,4 @@ let g:syntastic_phpcs_conf=" --standard=Drupal --extensions=php,module,inc,insta
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
+
