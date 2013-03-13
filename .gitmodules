@@ -19,9 +19,6 @@
 [submodule "bundle/indentguides"]
 	path = bundle/indentguides
 	url = git://github.com/nathanaelkane/vim-indent-guides.git
-[submodule "bundle/gitgutter"]
-	path = bundle/gitgutter
-	url = git://github.com/airblade/vim-gitgutter.git
 [submodule "bundle/jshint"]
 	path = bundle/jshint
 	url = git://github.com/walm/jshint.vim.git
@@ -46,3 +43,9 @@
 [submodule "snipmate-snippets"]
 	path = snipmate-snippets
 	url = git://github.com/honza/snipmate-snippets.git
+[submodule "bundle/scss-syntax"]
+	path = bundle/scss-syntax
+	url = https://github.com/cakebaker/scss-syntax.vim.git
+[submodule "bundle/signify"]
+	path = bundle/signify
+	url = https://github.com/mhinz/vim-signify

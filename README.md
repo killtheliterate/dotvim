@@ -1,5 +1,4 @@
 ## Special Tipz & Powerz
-### a few notes.
 
 ## Included plugins
 * AutoClose
@@ -17,4 +16,5 @@
 
 ## Notes
 * Ctrl-[ is how you get outta the : thingy mode
-* For learning about SnipMate --> http://vimeo.com/3535418
+* For learning about SnipMate --> http://bit.ly/12PVeJv
+* Using a forked version of SnipMate. See --> http://bit.ly/WbckOj
