@@ -46,3 +46,6 @@
 [submodule "bundle/signify"]
 	path = bundle/signify
 	url = https://github.com/mhinz/vim-signify
+[submodule "bundle/snipmate-snippets"]
+	path = bundle/snipmate-snippets
+	url = git://github.com/honza/snipmate-snippets.git
