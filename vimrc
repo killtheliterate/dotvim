@@ -165,9 +165,10 @@ set hidden
 
 "" YankRing
 let g:yankring_history_dir = '~/Dropbox/backups/vim-backups/yankring/'
+nnoremap <silent> <F11> :YRShow<CR>
 
 "" Indent Guides
-let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_enable_on_vim_startup = 0
 let g:indent_guides_color_change_percent = 5
 let g:indent_guides_space_guides = 1
 nmap <silent> <Leader>ig <Plug>IndentGuidesToggle
