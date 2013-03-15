@@ -1,9 +1,10 @@
 ## Special Tipz & Powerz
 
 ## Included plugins
-* AutoClose
+* Auto Pairs
 * Blockify
 * CtrlP
+* DrupalVim
 * Eunuch
 * Fugitive
 * Indent Guides
@@ -12,8 +13,11 @@
 * Powerline
 * Signify
 * SnipMate
+* Surround
 * Syntastic
-* tcomment
+* TagBar
+* tComment
+* Vim Git
 
 ## Notes
 * To update plugins --> git submodule foreach git pull origin master
@@ -25,5 +29,4 @@
 #### Todo
 * E486: Pattern not found: 666 --> can't open splits
 * tComment is doing it wrong for scss
-* PHPCS is being a toss piece. Drupal coding standards aren't being used.
-
+* Install phpcs and set Drupal as default syntax
