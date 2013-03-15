@@ -21,3 +21,9 @@
 * For learning about SnipMate --> http://bit.ly/12PVeJv
 * Using a forked version of SnipMate. See --> http://bit.ly/WbckOj
 * Ctrl-w is awesome
+
+#### Todo
+* E486: Pattern not found: 666 --> can't open splits
+* tComment is doing it wrong for scss
+* PHPCS is being a toss piece. Drupal coding standards aren't being used.
+

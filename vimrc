@@ -10,25 +10,24 @@ execute pathogen#infect()
 set nocompatible      " Use vim, no vi defaults
 set number            " Show line numbers
 set ruler             " Show line and column number
-syntax enable         " Turn on syntax highlighting allowing local overrides
-syntax on
+syntax on             " Turn on syntax highlighting allowing local overrides
 filetype plugin indent on
 set encoding=utf-8    " Set default encoding to UTF-8
 
 "" Whitespace
-set nowrap                        " don't wrap lines
+set wrap
+" set nowrap                        " don't wrap lines
 set tabstop=2                     " a tab is two spaces
+set softtabstop=2
 set shiftwidth=2                  " an autoindent (with <<) is two spaces
 set expandtab                     " use spaces, not tabs
 set list                          " Show invisible characters
 set backspace=indent,eol,start    " backspace through everything in insert mode
+
 set linespace=3
-set wrap
-set linebreak
-set textwidth=79
+set textwidth=78
 set formatoptions=qrn1
-set softtabstop=2
-set expandtab
+set formatoptions+=w
 
 "" Indentation
 set smartindent
@@ -194,7 +193,7 @@ let g:blockify_pairs = {
   \ 'java': [ '{', '}' ],
   \ 'php': [ '{', '}' ],
   \ 'css': [ '{', '}' ],
-  \ 'scss': [ '{', '}' ],
+  \ 'scss.css': [ '{', '}' ],
   \ 'js': [ '{', '}' ],
   \ 'php.drupal': [ '{', '}' ],
   \}
