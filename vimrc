@@ -183,9 +183,6 @@ let NERDTreeShowHidden=1
 "" Powerline
 let g:Powerline_symbols = 'fancy'
 
-"" Syntastic + DrupalCS
-let g:syntastic_phpcs_conf=" --standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
-
 "" Blockify
 let g:blockify_pairs = {
   \ 'c':    [ '{', '}' ],
