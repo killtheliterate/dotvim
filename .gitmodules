@@ -61,3 +61,9 @@
 [submodule "bundle/delimitmate"]
 	path = bundle/delimitmate
 	url = git://github.com/Raimondi/delimitMate.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = git://github.com/majutsushi/tagbar.git
+[submodule "bundle/surround"]
+	path = bundle/surround
+	url = git://github.com/tpope/vim-surround.git
