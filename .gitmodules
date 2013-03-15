@@ -58,3 +58,6 @@
 [submodule "bundle/vim-git"]
 	path = bundle/vim-git
 	url = git://github.com/tpope/vim-git.git
+[submodule "bundle/drupalvim"]
+	path = bundle/drupalvim
+	url = http://git.drupal.org/project/vimrc.git
