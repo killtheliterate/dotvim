@@ -195,9 +195,12 @@ let g:blockify_pairs = {
   \ 'php.drupal': [ '{', '}' ],
   \}
 
+noremap <leader>z :!say 'hey dudes'<CR>
+
 ""
 "" Reload .vimrc after editing and saving
 ""
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
+
