@@ -172,6 +172,7 @@ set hidden
 "" Unimpaired
 nmap <space>k ]b
 nmap <space>j [b
+" nnoremap <C-Space> ]b
 
 "" Indent Guides
 let g:indent_guides_enable_on_vim_startup = 0
