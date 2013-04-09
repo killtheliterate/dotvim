@@ -43,9 +43,6 @@
 [submodule "bundle/signify"]
 	path = bundle/signify
 	url = https://github.com/mhinz/vim-signify
-[submodule "bundle/snipmate-snippets"]
-	path = bundle/snipmate-snippets
-	url = git://github.com/honza/snipmate-snippets.git
 [submodule "bundle/sass-haml"]
 	path = bundle/sass-haml
 	url = git://github.com/tpope/vim-haml.git
