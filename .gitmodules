@@ -73,3 +73,6 @@
 [submodule "bundle/vdebug"]
 	path = bundle/vdebug
 	url = git://github.com/joonty/vdebug.git
+[submodule "bundle/javascript-syntax"]
+	path = bundle/javascript-syntax
+	url = https://github.com/jelera/vim-javascript-syntax.git

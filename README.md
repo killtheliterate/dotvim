@@ -30,3 +30,4 @@
 * E486: Pattern not found: 666 --> can't open splits
 * tComment is doing it wrong for scss
 * Install phpcs and set Drupal as default syntax
+* Using redundant scss plugins -- mebbe this is a bad idea

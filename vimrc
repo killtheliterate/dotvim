@@ -57,9 +57,9 @@ set wildignore+=*.swp,*~,._*
 "" Backup and swap files
 set backupdir^=~/Dropbox/backups/vim-backups/_backup//    " where to put backup files.
 set directory^=~/Dropbox/backups/vim-backups/_temp//      " where to put swap files.
-" set nobackup
-" set nowritebackup
-" set noswapfile
+set nobackup
+set nowritebackup
+set noswapfile
 
 "" <leader>
 let mapleader = ","
@@ -97,7 +97,11 @@ set showmode
 nnoremap <leader>q gqip
 
 "" enable code folding
-set foldenable
+" set foldenable
+set foldmethod=indent
+set foldlevelstart=99
+set nofoldenable
+
 
 "" hide mouse when typing
 set mousehide
@@ -163,15 +167,15 @@ nnoremap j gj
 nnoremap k gk
 
 "" switch buffers without saving
-set hidden
+"set hidden
 
 ""
 "" Plugins
 ""
 
 "" Unimpaired
-nmap <space>k ]b
-nmap <space>j [b
+nmap <space>n ]b
+nmap <space>p [b
 " nnoremap <C-Space> ]b
 
 "" Indent Guides
@@ -196,7 +200,8 @@ let g:blockify_pairs = {
   \ 'php': [ '{', '}' ],
   \ 'css': [ '{', '}' ],
   \ 'scss.css': [ '{', '}' ],
-  \ 'js': [ '{', '}' ],
+  \ 'scss': [ '{', '}' ],
+  \ 'javascript': [ '{', '}' ],
   \ 'php.drupal': [ '{', '}' ],
   \}
 
@@ -205,7 +210,8 @@ noremap <leader>z :!say 'hey dudes'<CR>
 ""
 "" Reload .vimrc after editing and saving
 ""
-if has("autocmd")
-  autocmd bufwritepost .vimrc source $MYVIMRC
-endif
+" if has("autocmd")
+"   autocmd bufwritepost .vimrc source $MYVIMRC
+" endif
 
+au BufRead,BufNewFile *.scss set filetype=scss
