@@ -125,7 +125,8 @@ map ,c <c-_><c-_>
 imap ,<tab> <C-x><C-o>
 
 "" map escape key to jj -- much faster
-imap jj <esc>
+" imap jj <esc>
+imap jk <esc>
 
 "" set text wrapping toggles
 nmap <silent> <leader>tw :set invwrap<CR>:set wrap?<CR>
