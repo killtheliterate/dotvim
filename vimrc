@@ -3,6 +3,7 @@
 "" https://github.com/carlhuda/janus
 "" http://xkcd.com/1172/
 
+
 "" PATHOGEN!!!!!!!!!!!!!!
 execute pathogen#infect()
 
@@ -72,6 +73,8 @@ set ignorecase
 set smartcase
 
 "" GUI
+set t_Co=256
+" let g:solarized_termcolors=256
 let g:solarized_termtrans = 1
 colorscheme solarized
 set guifont=Inconsolata\ for\ Powerline:h14
@@ -85,6 +88,10 @@ if has('gui_running')
 else
   set mouse=a
 endif
+
+" Toggle background color
+" This is being weird
+" call togglebg#map("<F5>")
 
 if exists("g:enable_mvim_shift_arrow")
   let macvim_hig_shift_movement = 1 " mvim shift-arrow-keys
@@ -191,7 +198,12 @@ nmap ,ntt :NERDTreeTabsToggle
 let NERDTreeShowHidden=1
 
 "" Powerline
-let g:Powerline_symbols = 'fancy'
+" let g:Powerline_symbols = 'fancy'
+
+"Powerline 2
+" python from powerline.bindings.vim import source_plugin; source_plugin()
+" source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
+set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
 
 "" Blockify
 let g:blockify_pairs = {
