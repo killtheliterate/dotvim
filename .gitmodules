@@ -25,9 +25,6 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
-[submodule "bundle/snipmate"]
-	path = bundle/snipmate
-	url = git://github.com/garbas/vim-snipmate.git
 [submodule "bundle/tlib_vim"]
 	path = bundle/tlib_vim
 	url = git://github.com/tomtom/tlib_vim.git
@@ -76,3 +73,6 @@
 [submodule "bundle/twig"]
 	path = bundle/twig
 	url = git://github.com/beyondwords/vim-twig.git
+[submodule "bundle/ultisnips"]
+	path = bundle/ultisnips
+	url = git://github.com/SirVer/ultisnips.git
