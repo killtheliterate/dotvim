@@ -73,6 +73,3 @@
 [submodule "bundle/twig"]
 	path = bundle/twig
 	url = git://github.com/beyondwords/vim-twig.git
-[submodule "bundle/vim-ultisnips"]
-	path = bundle/vim-ultisnips
-	url = git://github.com/MarcWeber/ultisnips.git
