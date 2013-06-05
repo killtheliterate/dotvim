@@ -25,6 +25,7 @@
 * For learning about SnipMate --> http://bit.ly/12PVeJv
 * Using a forked version of SnipMate. See --> http://bit.ly/WbckOj
 * Ctrl-w is awesome
+* Check into https://drupal.org/node/1389448 to see drupalvim stuff
 
 #### Todo
 * E486: Pattern not found: 666 --> can't open splits
