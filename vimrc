@@ -5,9 +5,8 @@
 
 
 "" PATHOGEN!!!!!!!!!!!!!!
-execute pathogen#infect('~/.vim/bundle/drupalvim/bundle')
 execute pathogen#infect()
-execute pathogen#helptags()
+" execute pathogen#helptags()
 
 "" Basic Setup
 set nocompatible      " Use vim, no vi defaults
