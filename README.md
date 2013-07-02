@@ -4,29 +4,30 @@
 * Auto Pairs
 * Blockify
 * CtrlP
+* Dash
 * DrupalVim
 * Eunuch
 * Fugitive
+* Funcoo
 * Indent Guides
 * JSHint
 * Nerd Tree
 * Powerline
 * Signify
-* SnipMate
 * Surround
 * Syntastic
 * TagBar
 * tComment
 * Vim Git
+* UltiSnip
+* YouCompleteMe
 
 ## Notes
 * To update plugins --> git submodule foreach git pull origin master
-* Ctrl-[ is how you get outta the : thingy mode
-* For learning about SnipMate --> http://bit.ly/12PVeJv
-* Using a forked version of SnipMate. See --> http://bit.ly/WbckOj
 * Ctrl-w is awesome
 * Check into https://drupal.org/node/1389448 to see drupalvim stuff
 * Install drupalvim with Drush
+* ./install.sh --clang-completer to install YouCompleteMe
 
 #### Todo
 * E486: Pattern not found: 666 --> can't open splits

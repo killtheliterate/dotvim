@@ -76,3 +76,9 @@
 [submodule "bundle/youcompleteme"]
 	path = bundle/youcompleteme
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "bundle/dash"]
+	path = bundle/dash
+	url = https://github.com/rizzatti/dash.vim.git
+[submodule "bundle/funcoo"]
+	path = bundle/funcoo
+	url = https://github.com/rizzatti/funcoo.vim.git
