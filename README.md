@@ -1,6 +1,7 @@
 ## Special Tipz & Powerz
 This is how I deal with my editor setup. I keep all my configuration in 
-a repo, which includes submodules.
+a repo, which includes submodules. My vimrc is meant to be symlinked from my 
+home directory, an obvious step which is naming the link with a dot.
 
 ## Included plugins
 * Auto Pairs
