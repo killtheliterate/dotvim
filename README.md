@@ -1,36 +1,43 @@
 ## Special Tipz & Powerz
+This is how I deal with my editor setup. I keep all my configuration in 
+a repo, which includes submodules.
 
 ## Included plugins
 * Auto Pairs
 * Blockify
+* Bufferline
 * CtrlP
 * Dash
-* DrupalVim
 * Eunuch
 * Fugitive
 * Funcoo
 * Indent Guides
 * JSHint
 * Nerd Tree
-* Powerline
 * Signify
 * Surround
 * Syntastic
 * TagBar
 * tComment
-* Vim Git
 * UltiSnip
+* Unimpaired
 * YouCompleteMe
+* Misc syntaxes and stuff
 
 ## Notes
 * To update plugins --> git submodule foreach git pull origin master
-* Ctrl-w is awesome
+* ./install.sh --clang-completer to install YouCompleteMe
+* I'm using Powerline. Not the Vim one, but the hard one, checkout out 
+  Airline.
+
+#### Drupal notes
 * Check into https://drupal.org/node/1389448 to see drupalvim stuff
 * Install drupalvim with Drush
-* ./install.sh --clang-completer to install YouCompleteMe
+* Install phpcs and set Drupal as default syntax
 
 #### Todo
+* Break configuration file up into smaller bits, so plugin configuration can 
+  be isolated.
 * E486: Pattern not found: 666 --> can't open splits
 * tComment is doing it wrong for scss
-* Install phpcs and set Drupal as default syntax
 * Using redundant scss plugins -- mebbe this is a bad idea

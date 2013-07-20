@@ -82,3 +82,6 @@
 [submodule "bundle/funcoo"]
 	path = bundle/funcoo
 	url = https://github.com/rizzatti/funcoo.vim.git
+[submodule "bundle/bufferline"]
+	path = bundle/bufferline
+	url = https://github.com/bling/vim-bufferline.git

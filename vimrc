@@ -75,7 +75,6 @@ set smartcase
 
 "" GUI
 set t_Co=256
-" let g:solarized_termcolors=256
 let g:solarized_termtrans = 1
 colorscheme solarized
 set guifont=Inconsolata\ for\ Powerline:h14
@@ -98,7 +97,7 @@ if exists("g:enable_mvim_shift_arrow")
   let macvim_hig_shift_movement = 1 " mvim shift-arrow-keys
 endif
 
-"" At least let yourself know what mode you're in
+"" at least let yourself know what mode you're in
 set showmode
 
 "" hard-wrap paragraphs of text
@@ -109,7 +108,6 @@ nnoremap <leader>q gqip
 set foldmethod=indent
 set foldlevelstart=99
 set nofoldenable
-
 
 "" hide mouse when typing
 set mousehide
@@ -133,7 +131,6 @@ map ,c <c-_><c-_>
 imap ,<tab> <C-x><C-o>
 
 "" map escape key to jj -- much faster
-" imap jj <esc>
 imap jk <esc>
 
 "" set text wrapping toggles
@@ -142,13 +139,13 @@ nmap <silent> <leader>tw :set invwrap<CR>:set wrap?<CR>
 "" find merge conflict markers
 nmap <silent> <leader>fc <ESC>/\v^[<=>]{7}( .*\|$)<CR>
 
-"" Window navigation
+"" window navigation
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
-"" Highlight brackets
+"" highlight brackets
 hi MatchParen cterm=bold ctermbg=darkmagenta ctermfg=white
 
 "" yank text to the OS X clipboard
@@ -159,7 +156,7 @@ noremap <leader>yy "+yy
 "" preserve indentation while pasting text from the OS X clipboard
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 
-"" Drupal line length
+"" line length
 set colorcolumn=80
 
 "" spellcheck
@@ -178,10 +175,6 @@ nnoremap k gk
 "" switch buffers without saving
 "set hidden
 
-""
-"" Plugins
-""
-
 "" Unimpaired
 nmap <space>n ]b
 nmap <space>p [b
@@ -198,12 +191,10 @@ nmap ,nt :NERDTreeToggle
 nmap ,ntt :NERDTreeTabsToggle
 let NERDTreeShowHidden=1
 
-"" Powerline
-" let g:Powerline_symbols = 'fancy'
+" Airline, a powerline replacement
+" let g:airline_powerline_fonts = 1
 
 "Powerline 2
-" python from powerline.bindings.vim import source_plugin; source_plugin()
-" source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
 set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
 
 "" Blockify
@@ -219,13 +210,12 @@ let g:blockify_pairs = {
   \ 'php.drupal': [ '{', '}' ],
   \}
 
-noremap <leader>z :!say 'hey dudes'<CR>
-
-""
 "" Reload .vimrc after editing and saving
-""
-" if has("autocmd")
-"   autocmd bufwritepost .vimrc source $MYVIMRC
-" endif
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+endif
 
 au BufRead,BufNewFile *.scss set filetype=scss
+
+"" Sup CTRL-P
+let g:ctrlp_by_filename = 1
