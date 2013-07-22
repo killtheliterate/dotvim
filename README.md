@@ -9,6 +9,7 @@ home directory, an obvious step which is naming the link with a dot.
 * Bufferline
 * CtrlP
 * Dash
+* EasyMotion
 * Eunuch
 * Fugitive
 * Funcoo
