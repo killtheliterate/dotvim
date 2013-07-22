@@ -28,8 +28,8 @@
 [submodule "bundle/tlib_vim"]
 	path = bundle/tlib_vim
 	url = git://github.com/tomtom/tlib_vim.git
-[submodule "bundle/addon-mw-utils"]
-	path = bundle/addon-mw-utils
+[submodule "bundle/vim-addon-mw-utils"]
+	path = bundle/vim-addon-mw-utils
 	url = git://github.com/MarcWeber/vim-addon-mw-utils.git
 [submodule "bundle/scss-syntax"]
 	path = bundle/scss-syntax
@@ -43,8 +43,8 @@
 [submodule "bundle/blockify"]
 	path = bundle/blockify
 	url = https://github.com/mhinz/vim-blockify
-[submodule "bundle/git"]
-	path = bundle/git
+[submodule "bundle/vim-git"]
+	path = bundle/vim-git
 	url = git://github.com/tpope/vim-git.git
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
@@ -61,11 +61,11 @@
 [submodule "bundle/javascript-syntax"]
 	path = bundle/javascript-syntax
 	url = https://github.com/jelera/vim-javascript-syntax.git
-[submodule "bundle/snippets"]
-	path = bundle/snippets
+[submodule "bundle/vim-snippets"]
+	path = bundle/vim-snippets
 	url = git://github.com/honza/vim-snippets.git
-[submodule "bundle/less"]
-	path = bundle/less
+[submodule "bundle/vim-less"]
+	path = bundle/vim-less
 	url = git://github.com/groenewege/vim-less.git
 [submodule "bundle/twig"]
 	path = bundle/twig
