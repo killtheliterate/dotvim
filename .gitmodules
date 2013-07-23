@@ -97,3 +97,6 @@
 [submodule "bundle/floobits"]
 	path = bundle/floobits
 	url = https://github.com/Floobits/floobits-vim.git
+[submodule "bundle/breeze"]
+	path = bundle/breeze
+	url = https://github.com/gcmt/breeze.vim.git
