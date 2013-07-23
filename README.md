@@ -11,11 +11,13 @@ home directory, an obvious step which is naming the link with a dot.
 * Dash
 * EasyMotion
 * Eunuch
+* Floobits
 * Fugitive
 * Funcoo
 * Indent Guides
 * JSHint
 * Nerd Tree
+* Numbers
 * Signify
 * Surround
 * Syntastic
