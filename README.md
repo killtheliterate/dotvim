@@ -33,6 +33,7 @@ home directory, an obvious step which is naming the link with a dot.
 * ./install.sh --clang-completer to install YouCompleteMe
 * I'm using Powerline. Not the Vim one, but the hard one, checkout out 
   Airline.
+* Install tern with npm
 
 #### Drupal notes
 * Check into https://drupal.org/node/1389448 to see drupalvim stuff
