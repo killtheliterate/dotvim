@@ -100,3 +100,6 @@
 [submodule "bundle/tern"]
 	path = bundle/tern
 	url = https://github.com/marijnh/tern_for_vim.git
+[submodule "bundle/enhanced-js-syntax"]
+	path = bundle/enhanced-js-syntax
+	url = https://github.com/jelera/vim-javascript-syntax.git

@@ -219,3 +219,6 @@ au BufRead,BufNewFile *.scss set filetype=scss
 
 "" Sup CTRL-P
 let g:ctrlp_by_filename = 1
+
+" JS enhanced syntax
+au FileType javascript call JavaScriptFold()
