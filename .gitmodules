@@ -103,3 +103,15 @@
 [submodule "bundle/enhanced-js-syntax"]
 	path = bundle/enhanced-js-syntax
 	url = https://github.com/jelera/vim-javascript-syntax.git
+[submodule "bundle/move"]
+	path = bundle/move
+	url = https://github.com/matze/vim-move.git
+[submodule "bundle/vim-tern"]
+	path = bundle/vim-tern
+	url = https://github.com/marijnh/tern_for_vim.git
+[submodule "bundle/vim-gist"]
+	path = bundle/vim-gist
+	url = https://github.com/mattn/gist-vim.git
+[submodule "bundle/ack-vim"]
+	path = bundle/ack-vim
+	url = https://github.com/mileszs/ack.vim.git

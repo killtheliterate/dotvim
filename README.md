@@ -16,6 +16,7 @@ home directory, an obvious step which is naming the link with a dot.
 * Funcoo
 * Indent Guides
 * JSHint
+* Move
 * Nerd Tree
 * Numbers
 * Signify
@@ -34,6 +35,9 @@ home directory, an obvious step which is naming the link with a dot.
 * I'm using Powerline. Not the Vim one, but the hard one, checkout out 
   Airline.
 * Install tern with npm
+* Make sure you have node.js and npm installed (Tern is a JavaScript program), 
+  and install the tern server by running npm install in the 
+  bundle/tern_for_vim directory.
 
 #### Drupal notes
 * Check into https://drupal.org/node/1389448 to see drupalvim stuff
