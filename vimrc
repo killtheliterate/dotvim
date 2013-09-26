@@ -5,7 +5,7 @@
 
 
 "" PATHOGEN!!!!!!!!!!!!!!
-execute pathogen#infect()
+" execute pathogen#infect()
 " execute pathogen#helptags()
 
 "" Basic Setup
