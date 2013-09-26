@@ -222,3 +222,6 @@ let g:ctrlp_by_filename = 1
 
 " JS enhanced syntax
 au FileType javascript call JavaScriptFold()
+
+" Numbers
+let g:numbers_exclude = ['nerdtree']
