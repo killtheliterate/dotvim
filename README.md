@@ -4,6 +4,7 @@ a repo, which includes submodules. My vimrc is meant to be symlinked from my
 home directory, an obvious step which is naming the link with a dot.
 
 ## Included plugins
+* Vundle
 * Auto Pairs
 * Blockify
 * Bufferline
@@ -30,7 +31,6 @@ home directory, an obvious step which is naming the link with a dot.
 * Misc syntaxes and stuff
 
 ## Notes
-* To update plugins --> git submodule foreach git pull origin master
 * ./install.sh --clang-completer to install YouCompleteMe
 * I'm using Powerline. Not the Vim one, but the hard one, checkout out 
   Airline.
@@ -47,6 +47,6 @@ home directory, an obvious step which is naming the link with a dot.
 #### Todo
 * Break configuration file up into smaller bits, so plugin configuration can 
   be isolated.
-* E486: Pattern not found: 666 --> can't open splits
 * tComment is doing it wrong for scss
 * Using redundant scss plugins -- mebbe this is a bad idea
+* Can't remember what is linting CSS, and it.is.terrible.
