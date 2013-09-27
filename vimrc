@@ -9,6 +9,7 @@
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
+filetype off
 
 "" General configuration ----------------------------------------------------
 set number                      "Line numbers are good
@@ -61,8 +62,8 @@ set tabstop=2
 set expandtab
 
 
-filetype plugin on
-filetype indent on
+" Something to do with Vundle ------------------------------------------------
+filetype plugin indent on
 
 " Display tabs and trailing spaces visually
 set list

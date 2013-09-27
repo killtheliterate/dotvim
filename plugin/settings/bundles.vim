@@ -1,7 +1,4 @@
-" Let Vundle manage Vundle
 Bundle 'gmarik/vundle'
-
-" 
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim.git'
