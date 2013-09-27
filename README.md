@@ -31,6 +31,7 @@ home directory, an obvious step which is naming the link with a dot.
 * Misc syntaxes and stuff
 
 ## Notes
+* To install stuff... :BundleInstall
 * ./install.sh --clang-completer to install YouCompleteMe
 * I'm using Powerline. Not the Vim one, but the hard one, checkout out 
   Airline.
