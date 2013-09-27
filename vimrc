@@ -1,138 +1,164 @@
 "" I found this on the internet
-""
-"" http://bit.ly/178vQi9
-"" http://bit.ly/1h8T3T3
-"" http://bit.ly/198R1NE
-"" http://bit.ly/15ZT2iF
-"" --------------------------------------------------------------------------
+"" http://net.tutsplus.com/articles/general/top-10-pitfalls-when-switching-to-vim/
+"" https://github.com/carlhuda/janus
+"" http://xkcd.com/1172/
+"" Todo: 
+"" Break apart vimrc into distinct pieces.
+"" ---------------------------------------------------------------------
 
-" Use Vim settings, rather then Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-set nocompatible
-filetype off
-
-"" General configuration ----------------------------------------------------
-set number                      "Line numbers are good
-set backspace=indent,eol,start  "Allow backspace in insert mode
-set history=1000                "Store lots of :cmdline history
-set showcmd                     "Show incomplete cmds down the bottom
-set showmode                    "Show current mode down the bottom
-set gcr=a:blinkon0              "Disable cursor blink
-set visualbell                  "No sounds
-set autoread                    "Reload files changed outside vim
-
-" This makes vim act like all other editors, buffers can
-" exist in the background without being in a window.
-" http://items.sjbach.com/319/configuring-vim-right
-set hidden
-
-"turn on syntax highlighting
-syntax on
-
-" Change leader to a comma because the backslash is too far away
-" That means all \x commands turn into ,x
-" The mapleader has to be set before vundle starts loading all 
-" the plugins.
-let mapleader=","
-set timeoutlen=500
-
-"" Initialize Vundle --------------------------------------------------------
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-"" Turn Off Swap Files ------------------------------------------------------
-set noswapfile
-set nobackup
-set nowb
+" Let Vundle manage Vundle
+Bundle 'gmarik/vundle'
 
-"" Persistent Undo ----------------------------------------------------------
-" Keep undo history across sessions, by storing in file.
-" Only works all the time.
-silent !mkdir ~/.vim/backups > /dev/null 2>&1
-set undodir=~/.vim/backups
-set undofile
+" Plugins
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'tpope/vim-fugitive'
+Bundle 'kien/ctrlp.vim.git'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'tpope/vim-eunuch'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'walm/jshint.vim'
+Bundle 'scrooloose/syntastic'
+Bundle 'tomtom/tlib_vim'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'cakebaker/scss-syntax.vim'
+Bundle 'mhinz/vim-signify'
+Bundle 'tpope/vim-haml'
+Bundle 'mhinz/vim-blockify'
+Bundle 'tpope/vim-git'
+Bundle 'majutsushi/tagbar'
+Bundle 'tpope/vim-surround'
+Bundle 'jiangmiao/auto-pairs'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'jelera/vim-javascript-syntax'
+Bundle 'honza/vim-snippets'
+Bundle 'groenewege/vim-less'
+Bundle 'beyondwords/vim-twig'
+Bundle 'SirVer/ultisnips'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'rizzatti/dash.vim'
+Bundle 'rizzatti/funcoo.vim'
+Bundle 'bling/vim-bufferline'
+Bundle 'sjl/vitality.vim'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'gcmt/breeze.vim'
+Bundle 'marijnh/tern_for_vim'
+Bundle 'vim-javascript-syntax'
+Bundle 'matze/vim-move'
+Bundle 'mattn/gist-vim'
+Bundle 'mileszs/ack.vim'
+Bundle 'myusuf3/numbers.vim'
 
-"" Indentation & Space ------------------------------------------------------
-set autoindent
-set smartindent
-set smarttab
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
-set expandtab
 
-
-" Something to do with Vundle ------------------------------------------------
+"" Basic Setup
+set nocompatible      " Use vim, no vi defaults
+set number            " Show line numbers
+set ruler             " Show line and column number
+syntax on             " Turn on syntax highlighting allowing local overrides
 filetype plugin indent on
+set encoding=utf-8    " Set default encoding to UTF-8
 
-" Display tabs and trailing spaces visually
-set list
-set list listchars=tab:\ \ ,trail:·
-set list listchars+=extends:>
-set list listchars+=precedes:<
+"" Whitespace
+set wrap
+" set nowrap                        " don't wrap lines
+set tabstop=2                     " a tab is two spaces
+set softtabstop=2
+set shiftwidth=2                  " an autoindent (with <<) is two spaces
+set expandtab                     " use spaces, not tabs
+set list                          " Show invisible characters
+set backspace=indent,eol,start    " backspace through everything in insert mode
 
-" Rapping
-set nowrap       "Don't wrap lines
-set linebreak    "Wrap lines at convenient points
-
-" Text shit
 set linespace=3
 set textwidth=78
-set colorcolumn=80
 set formatoptions=qrn1
 set formatoptions+=w
 
-" Indentation
+"" Indentation
 set smartindent
 set autoindent
 
-"" Searching ----------------------------------------------------------------
-set incsearch
-set hlsearch
-set ignorecase
-set smartcase
+" List chars
+set listchars=""                  " Reset the listchars
+set listchars=tab:\ \             " a tab should display as "  ", trailing whitespace as "."
+set listchars+=trail:.            " show trailing spaces as dots
+set listchars+=extends:>          " The character to show in the last column when wrap is
+                                  " off and the line continues beyond the right of the screen
+set listchars+=precedes:<         " The character to show in the last column when wrap is
+                                  " off and the line continues beyond the right of the screen
+"" Searching
 set hlsearch    " highlight matches
 set incsearch   " incremental searching
 set ignorecase  " searches are case insensitive...
 set smartcase   " ... unless they contain at least one capital letter
 nmap <silent> ,/ :nohlsearch<CR>
 
-"" Wildcards ----------------------------------------------------------------
+"" Wildcard settings
 set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
 set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
 set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
 set wildignore+=*.swp,*~,._*
 
-"" Completion ---------------------------------------------------------------
-set wildmode=list:longest
-set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
-set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
-set wildignore+=*vim/backups*
-set wildignore+=*sass-cache*
-set wildignore+=*DS_Store*
-set wildignore+=vendor/rails/**
-set wildignore+=vendor/cache/**
-set wildignore+=*.gem
-set wildignore+=log/**
-set wildignore+=tmp/**
-set wildignore+=*.png,*.jpg,*.gif
-
-"" Swap ---------------------------------------------------------------------
+"" Backup and swap files
+set backupdir^=~/Dropbox/backups/vim-backups/_backup//    " where to put backup files.
+set directory^=~/Dropbox/backups/vim-backups/_temp//      " where to put swap files.
 set nobackup
 set nowritebackup
 set noswapfile
 
-"" Folds --------------------------------------------------------------------
-set foldmethod=indent   "fold based on indent
-set foldnestmax=3       "deepest fold is 3 levels
-set nofoldenable        "dont fold by default
-"" shortcut to fold tags with leader (usually \) + ft
-nnoremap <leader>ft Vatzf
+"" <leader>
+let mapleader = ","
+set timeoutlen=500
 
-"" TODO --------------------------------------------------------------------
+"" Search
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+
+"" GUI
+set t_Co=256
+let g:solarized_termtrans = 1
+colorscheme solarized
+set guifont=Inconsolata\ for\ Powerline:h14
+set guioptions=aAce
+if has('gui_running')
+  set go-=T
+  if has("autocmd")
+    autocmd VimEnter * NERDTree
+    autocmd Vimenter * wincmd p
+  endif
+else
+  set mouse=a
+endif
+
+" Toggle background color
+" This is being weird
+" call togglebg#map("<F5>")
+
+if exists("g:enable_mvim_shift_arrow")
+  let macvim_hig_shift_movement = 1 " mvim shift-arrow-keys
+endif
+
+"" at least let yourself know what mode you're in
+set showmode
+
+"" hard-wrap paragraphs of text
+nnoremap <leader>q gqip
+
+"" enable code folding
+" set foldenable
+set foldmethod=indent
+set foldlevelstart=99
+set nofoldenable
 
 "" hide mouse when typing
 set mousehide
+
+"" shortcut to fold tags with leader (usually \) + ft
+nnoremap <leader>ft Vatzf
 
 "" opens a vertical split and switches over (\v)
 nnoremap <leader>v <C-w>v<C-w>l
@@ -173,17 +199,74 @@ noremap <leader>y "+y
 noremap <leader>yy "+yy
 
 "" preserve indentation while pasting text from the OS X clipboard
-" noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
+noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
+
+"" line length
+set colorcolumn=80
+
+"" spellcheck
+map <leader>ss :setlocal spell!<cr>
+
+"" shortcuts using <leader>
+map <leader>sn ]s
+map <leader>sp [s
+map <leader>sa zg
+map <leader>s? z=
 
 "" Up/Down keys move by row, rather than line
 nnoremap j gj
 nnoremap k gk
+
+"" switch buffers without saving
+"set hidden
+
+"" Unimpaired
+nmap <space>n ]b
+nmap <space>p [b
+" nnoremap <C-Space> ]b
+
+"" Indent Guides
+let g:indent_guides_enable_on_vim_startup = 0
+let g:indent_guides_color_change_percent = 5
+let g:indent_guides_space_guides = 1
+nmap <silent> <Leader>ig <Plug>IndentGuidesToggle
+
+"" Nerd Tree
+nmap ,nt :NERDTreeToggle
+nmap ,ntt :NERDTreeTabsToggle
+let NERDTreeShowHidden=1
+
+" Airline, a powerline replacement
+" let g:airline_powerline_fonts = 1
+
+"Powerline 2
+set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
+
+"" Blockify
+let g:blockify_pairs = {
+  \ 'c':    [ '{', '}' ],
+  \ 'cpp':  [ '{', '}' ],
+  \ 'java': [ '{', '}' ],
+  \ 'php': [ '{', '}' ],
+  \ 'css': [ '{', '}' ],
+  \ 'scss.css': [ '{', '}' ],
+  \ 'scss': [ '{', '}' ],
+  \ 'javascript': [ '{', '}' ],
+  \ 'php.drupal': [ '{', '}' ],
+  \}
 
 "" Reload .vimrc after editing and saving
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
 
-"" SCSS YAW
 au BufRead,BufNewFile *.scss set filetype=scss
 
+"" Sup CTRL-P
+let g:ctrlp_by_filename = 1
+
+" JS enhanced syntax
+au FileType javascript call JavaScriptFold()
+
+" Numbers
+let g:numbers_exclude = ['nerdtree']
