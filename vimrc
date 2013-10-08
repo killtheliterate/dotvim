@@ -116,11 +116,6 @@ set wildignore+=log/**
 set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 
-"" Swap ---------------------------------------------------------------------
-set nobackup
-set nowritebackup
-set noswapfile
-
 "" Folds --------------------------------------------------------------------
 set foldmethod=indent   "fold based on indent
 set foldnestmax=3       "deepest fold is 3 levels
