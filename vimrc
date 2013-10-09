@@ -66,6 +66,22 @@ set encoding=utf-8    " Set default encoding to UTF-8
 set wrap
 " set nowrap                        " don't wrap lines
 set tabstop=2                     " a tab is two spaces
+
+"" Turn Off Swap Files ------------------------------------------------------
+set noswapfile
+set nobackup
+set nowb
+
+"" Persistent Undo ----------------------------------------------------------
+" Keep undo history across sessions, by storing in file.
+" Only works all the time.
+silent !mkdir ~/.vim/backups > /dev/null 2>&1
+set undodir=~/.vim/backups
+set undofile
+
+"" Indentation & Space ------------------------------------------------------
+set smarttab
+set shiftwidth=2
 set softtabstop=2
 set shiftwidth=2                  " an autoindent (with <<) is two spaces
 set expandtab                     " use spaces, not tabs
