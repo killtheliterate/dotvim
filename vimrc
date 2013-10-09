@@ -13,6 +13,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Plugins
+Bundle 'nono/vim-handlebars'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim.git'
