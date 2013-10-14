@@ -68,6 +68,8 @@ set wrap
 set tabstop=2                     " a tab is two spaces
 
 "" Turn Off Swap Files ------------------------------------------------------
+set backupdir^=~/Dropbox/backups/vim-backups/_backup//    " where to put backup files.
+set directory^=~/Dropbox/backups/vim-backups/_temp//      " where to put swap files.
 set noswapfile
 set nobackup
 set nowb
@@ -117,13 +119,6 @@ set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
 set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
 set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
 set wildignore+=*.swp,*~,._*
-
-"" Backup and swap files
-set backupdir^=~/Dropbox/backups/vim-backups/_backup//    " where to put backup files.
-set directory^=~/Dropbox/backups/vim-backups/_temp//      " where to put swap files.
-set nobackup
-set nowritebackup
-set noswapfile
 
 "" <leader>
 let mapleader = ","
