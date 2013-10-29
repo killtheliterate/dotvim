@@ -78,15 +78,15 @@ set nowb
 "" Persistent Undo ----------------------------------------------------------
 " Keep undo history across sessions, by storing in file.
 " Only works all the time.
-silent !mkdir ~/.vim/backups > /dev/null 2>&1
-set undodir=~/.vim/backups
-set undofile
+" TODO: This is causing the shell to behave weirdly after exiting vim.
+" silent !mkdir ~/.vim/backups > /dev/null 2>&1
+" set undodir=~/.vim/backups
+" set undofile
 
 "" Indentation & Space ------------------------------------------------------
 set smarttab
 set shiftwidth=2
 set softtabstop=2
-set shiftwidth=2                  " an autoindent (with <<) is two spaces
 set expandtab                     " use spaces, not tabs
 set list                          " Show invisible characters
 set backspace=indent,eol,start    " backspace through everything in insert mode
