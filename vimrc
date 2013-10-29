@@ -51,7 +51,7 @@ Bundle 'myusuf3/numbers.vim'
 Bundle 'nono/vim-handlebars'
 Bundle 'groenewege/vim-less'
 Bundle 'beyondwords/vim-twig'
-Bundle 'jelera/vim-javascript-syntax'
+" Bundle 'jelera/vim-javascript-syntax'
 Bundle 'tpope/vim-haml'
 Bundle 'cakebaker/scss-syntax.vim'
 
@@ -250,10 +250,10 @@ nmap ,ntt :NERDTreeTabsToggle
 let NERDTreeShowHidden=1
 
 " Airline, a powerline replacement
-" let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 
 "Powerline 2
-set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
+" set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
 
 "" Blockify
 let g:blockify_pairs = {
@@ -276,10 +276,13 @@ endif
 au BufRead,BufNewFile *.scss set filetype=scss
 
 "" Sup CTRL-P
-let g:ctrlp_by_filename = 1
+" let g:ctrlp_by_filename = 1
 
 " JS enhanced syntax
-au FileType javascript call JavaScriptFold()
+" au FileType javascript call JavaScriptFold()
 
 " Numbers
 let g:numbers_exclude = ['nerdtree']
+
+" Leader Leader to switch between last 2 buffers
+nnoremap <leader><leader> <c-^>
