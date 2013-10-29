@@ -51,3 +51,5 @@ home directory, an obvious step which is naming the link with a dot.
 * tComment is doing it wrong for scss
 * Using redundant scss plugins -- mebbe this is a bad idea
 * Can't remember what is linting CSS, and it.is.terrible.
+* Figure out why exiting vim pushes prompt to bottom of screen. This seems to 
+  be due to a vim configuration, possibly a plugin.
