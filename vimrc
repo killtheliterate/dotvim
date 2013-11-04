@@ -79,9 +79,9 @@ set nowb
 " Keep undo history across sessions, by storing in file.
 " Only works all the time.
 " TODO: This is causing the shell to behave weirdly after exiting vim.
-" silent !mkdir ~/.vim/backups > /dev/null 2>&1
-" set undodir=~/.vim/backups
-" set undofile
+silent !mkdir ~/.vim/backups > /dev/null 2>&1
+set undodir=~/.vim/backups
+set undofile
 
 "" Indentation & Space ------------------------------------------------------
 set smarttab
@@ -208,8 +208,8 @@ hi MatchParen cterm=bold ctermbg=darkmagenta ctermfg=white
 
 "" yank text to the OS X clipboard
 set clipboard=unnamed
-noremap <leader>y "+y
-noremap <leader>yy "+yy
+" noremap <leader>y "+y
+" noremap <leader>yy "+yy
 
 "" preserve indentation while pasting text from the OS X clipboard
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
@@ -286,3 +286,13 @@ let g:numbers_exclude = ['nerdtree']
 
 " Leader Leader to switch between last 2 buffers
 nnoremap <leader><leader> <c-^>
+
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_jump=1
+let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+let g:syntastic_javascript_checkers = ['jshint']
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
