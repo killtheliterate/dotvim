@@ -1,14 +1,12 @@
 ## Special Tipz & Powerz
-This is how I deal with my editor setup. I keep all my configuration in 
-a repo, which includes submodules. My vimrc is meant to be symlinked from my 
-home directory, an obvious step which is naming the link with a dot.
+This is how I deal with my editor setup. My vimrc is meant to be symlinked from my 
+home directory, an obvious step of which is appending a dot to the symlink 
+name. Plugin management is handled by [Vundle](https://github.com/gmarik/vundle).
 
 ## Included plugins
-Plugin management is handled by Vundle:
 ```
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 ```
-Start vim, and :BundleInstall
 
 * [Ack](http://github.com/mileszs/ack.vim)
 * [Airline](http://github.com/bling/vim-airline)
