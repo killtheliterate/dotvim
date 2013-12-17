@@ -54,6 +54,7 @@ Bundle 'beyondwords/vim-twig'
 " Bundle 'jelera/vim-javascript-syntax'
 Bundle 'tpope/vim-haml'
 Bundle 'cakebaker/scss-syntax.vim'
+Bundle 'tpope/vim-liquid'
 
 "" Basic Setup
 set nocompatible      " Use vim, no vi defaults
@@ -288,7 +289,7 @@ let g:numbers_exclude = ['nerdtree']
 nnoremap <leader><leader> <c-^>
 
 let g:syntastic_enable_signs=1
-let g:syntastic_auto_jump=1
+let g:syntastic_auto_jump=0
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 let g:syntastic_javascript_checkers = ['jshint']
 
