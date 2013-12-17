@@ -13,39 +13,40 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Plugins
+" Bundle 'mileszs/ack.vim'
 Bundle 'bling/vim-airline'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'tpope/vim-fugitive'
+Bundle 'jiangmiao/auto-pairs'
+Bundle 'mhinz/vim-blockify'
+Bundle 'gcmt/breeze.vim'
+Bundle 'bling/vim-bufferline'
 " Bundle 'kien/ctrlp.vim.git'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tomtom/tcomment_vim'
+" Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-eunuch'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-git'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'walm/jshint.vim'
+" Bundle 'matze/vim-move'
+Bundle 'scrooloose/nerdtree'
+Bundle 'myusuf3/numbers.vim'
+Bundle 'mhinz/vim-signify'
+Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/syntastic'
+Bundle 'majutsushi/tagbar'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'marijnh/tern_for_vim'
+" Bundle 'SirVer/ultisnips'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'sjl/vitality.vim'
+" Bundle 'Valloric/YouCompleteMe'
+
+" Misc
 Bundle 'tomtom/tlib_vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'mhinz/vim-signify'
-Bundle 'mhinz/vim-blockify'
-Bundle 'tpope/vim-git'
-Bundle 'majutsushi/tagbar'
-Bundle 'tpope/vim-surround'
-Bundle 'jiangmiao/auto-pairs'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'honza/vim-snippets'
-" Bundle 'SirVer/ultisnips'
-" Bundle 'Valloric/YouCompleteMe'
-" Bundle 'rizzatti/dash.vim'
 Bundle 'rizzatti/funcoo.vim'
-Bundle 'bling/vim-bufferline'
-Bundle 'sjl/vitality.vim'
-" Bundle 'Lokaltog/vim-easymotion'
-Bundle 'gcmt/breeze.vim'
-Bundle 'marijnh/tern_for_vim'
-" Bundle 'matze/vim-move'
-" Bundle 'mattn/gist-vim'
-" Bundle 'mileszs/ack.vim'
-Bundle 'myusuf3/numbers.vim'
+
+" Colors
+Bundle 'altercation/vim-colors-solarized'
 
 " Syntax
 Bundle 'nono/vim-handlebars'
@@ -297,3 +298,12 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+
+" Remapping unimpaired bubbling to textmate like bubbling
+" Bubble single lines
+nmap <C-Up> [e
+nmap <C-Down> ]e
+
+" Bubble multiple lines
+vmap <C-Up> [egv
+vmap <C-Down> ]egv
