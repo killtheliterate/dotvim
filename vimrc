@@ -14,6 +14,7 @@ Bundle 'gmarik/vundle'
 
 " Plugins
 " Bundle 'mileszs/ack.vim'
+Bundle 'jpalardy/vim-slime'
 Bundle 'bling/vim-airline'
 Bundle 'jiangmiao/auto-pairs'
 Bundle 'mhinz/vim-blockify'
@@ -307,3 +308,6 @@ nmap <C-Down> ]e
 " Bubble multiple lines
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
+
+" Slime
+let g:slime_target = "tmux"
