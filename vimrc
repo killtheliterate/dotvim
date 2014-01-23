@@ -310,10 +310,8 @@ nmap <C-Down> ]e
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
 
-<<<<<<< HEAD
 " EasyMotion
 let g:EasyMotion_leader_key = '<Space>'
-=======
+
 " Slime
 let g:slime_target = "tmux"
->>>>>>> bbcb2fc29fa576b081250e83fd92fd39a86c0844
