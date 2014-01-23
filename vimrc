@@ -13,21 +13,21 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Plugins
-" Bundle 'mileszs/ack.vim'
+Bundle 'mileszs/ack.vim'
 Bundle 'bling/vim-airline'
 Bundle 'jiangmiao/auto-pairs'
 Bundle 'mhinz/vim-blockify'
 Bundle 'gcmt/breeze.vim'
 Bundle 'bling/vim-bufferline'
-" Bundle 'kien/ctrlp.vim.git'
-" Bundle 'Lokaltog/vim-easymotion'
+Bundle 'kien/ctrlp.vim.git'
+Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-git'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'walm/jshint.vim'
 " Bundle 'matze/vim-move'
-Bundle 'scrooloose/nerdtree'
+" Bundle 'scrooloose/nerdtree'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'mhinz/vim-signify'
 Bundle 'tpope/vim-surround'
@@ -37,6 +37,7 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'marijnh/tern_for_vim'
 " Bundle 'SirVer/ultisnips'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-vinegar'
 Bundle 'sjl/vitality.vim'
 " Bundle 'Valloric/YouCompleteMe'
 
@@ -289,7 +290,7 @@ let g:numbers_exclude = ['nerdtree']
 nnoremap <leader><leader> <c-^>
 
 let g:syntastic_enable_signs=1
-let g:syntastic_auto_jump=1
+let g:syntastic_auto_jump=0
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 let g:syntastic_javascript_checkers = ['jshint']
 
@@ -306,3 +307,6 @@ nmap <C-Down> ]e
 " Bubble multiple lines
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
+
+" EasyMotion
+let g:EasyMotion_leader_key = '<Space>'
