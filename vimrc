@@ -14,6 +14,7 @@ Bundle 'gmarik/vundle'
 
 " Plugins
 Bundle 'mileszs/ack.vim'
+Bundle 'jpalardy/vim-slime'
 Bundle 'bling/vim-airline'
 Bundle 'jiangmiao/auto-pairs'
 Bundle 'mhinz/vim-blockify'
@@ -56,6 +57,7 @@ Bundle 'beyondwords/vim-twig'
 " Bundle 'jelera/vim-javascript-syntax'
 Bundle 'tpope/vim-haml'
 Bundle 'cakebaker/scss-syntax.vim'
+Bundle 'tpope/vim-liquid'
 
 "" Basic Setup
 set nocompatible      " Use vim, no vi defaults
@@ -308,5 +310,10 @@ nmap <C-Down> ]e
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
 
+<<<<<<< HEAD
 " EasyMotion
 let g:EasyMotion_leader_key = '<Space>'
+=======
+" Slime
+let g:slime_target = "tmux"
+>>>>>>> bbcb2fc29fa576b081250e83fd92fd39a86c0844
