@@ -14,8 +14,8 @@ Bundle 'gmarik/vundle'
 
 " Plugins
 Bundle 'mileszs/ack.vim'
-Bundle 'jpalardy/vim-slime'
 Bundle 'bling/vim-airline'
+Bundle 'jpalardy/vim-slime'
 Bundle 'jiangmiao/auto-pairs'
 Bundle 'mhinz/vim-blockify'
 Bundle 'gcmt/breeze.vim'
@@ -26,9 +26,9 @@ Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-git'
 Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'walm/jshint.vim'
+" Bundle 'walm/jshint.vim'
 " Bundle 'matze/vim-move'
-" Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdtree'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'mhinz/vim-signify'
 Bundle 'tpope/vim-surround'
@@ -144,16 +144,11 @@ set guioptions=aAce
 if has('gui_running')
   set go-=T
   if has("autocmd")
-    autocmd VimEnter * NERDTree
-    autocmd Vimenter * wincmd p
+    autocmd VimEnter * wincmd p
   endif
 else
   set mouse=a
 endif
-
-" Toggle background color
-" This is being weird
-" call togglebg#map("<F5>")
 
 if exists("g:enable_mvim_shift_arrow")
   let macvim_hig_shift_movement = 1 " mvim shift-arrow-keys
@@ -212,11 +207,9 @@ hi MatchParen cterm=bold ctermbg=darkmagenta ctermfg=white
 
 "" yank text to the OS X clipboard
 set clipboard=unnamed
-" noremap <leader>y "+y
-" noremap <leader>yy "+yy
 
 "" preserve indentation while pasting text from the OS X clipboard
-noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
+" noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 
 "" line length
 set colorcolumn=80
@@ -255,9 +248,6 @@ let NERDTreeShowHidden=1
 
 " Airline, a powerline replacement
 let g:airline_powerline_fonts = 1
-
-"Powerline 2
-" set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
 
 "" Blockify
 let g:blockify_pairs = {
@@ -303,15 +293,19 @@ set statusline+=%*
 
 " Remapping unimpaired bubbling to textmate like bubbling
 " Bubble single lines
-nmap <C-Up> [e
-nmap <C-Down> ]e
+nmap <C-k> [e
+nmap <C-j> ]e
 
 " Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
+vmap <C-k> [egv
+vmap <C-j> ]egv
 
 " EasyMotion
 let g:EasyMotion_leader_key = '<Space>'
 
 " Slime
 let g:slime_target = "tmux"
+
+" Search highlighter
+hi IncSearch cterm=NONE ctermfg=white ctermbg=5
+hi Search    cterm=NONE ctermfg=white ctermbg=5
