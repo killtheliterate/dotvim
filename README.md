@@ -20,20 +20,18 @@ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 * [Fugitive](http://github.com/tpope/vim-fugitive)
 * [Git](http://github.com/tpope/vim-git)
 * [Indent Guides](http://github.com/nathanaelkane/vim-indent-guides)
-* [JSHint](http://github.com/walm/jshint.vim)
 * [Move](http://github.com/matze/vim-move)
 * [Nerd Tree](http://github.com/scrooloose/nerdtree)
 * [Numbers](http://github.com/myusuf3/numbers.vim)
 * [Signify](http://github.com/mhinz/vim-signify)
 * [Surround](http://github.com/tpope/vim-surround)
 * [Syntastic](http://github.com/scrooloose/syntastic)
+* [Slime](http://github.com/jpalardy/vim-slime)
 * [TagBar](http://github.com/majutsushi/tagbar)
 * [tComment](http://github.com/tomtom/tcomment_vim)
 * [Tern](http://github.com/marijnh/tern_for_vim)
-* [UltiSnip](http://github.com/SirVer/ultisnips)
 * [Unimpaired](http://github.com/tpope/vim-unimpaired)
 * [Vitality](http://github.com/sjl/vitality.vim)
-* [YouCompleteMe](http://github.com/Valloric/YouCompleteMe)
 * Misc syntaxes and stuff
 
 ## Notes
