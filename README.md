@@ -36,7 +36,6 @@ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 ## Notes
 * To install the included plugins, run :BundleInstall
-* ./install.sh --clang-completer to install YouCompleteMe
 * Make sure you have node.js and npm installed (Tern is a JavaScript program), 
   and install the tern server by running npm install in the 
   bundle/tern_for_vim directory.
