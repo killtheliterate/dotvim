@@ -14,6 +14,9 @@ Bundle 'gmarik/vundle'
 
 " Plugins
 Bundle 'Lokaltog/vim-easymotion'
+" Bundle 'Shougo/neocomplete.vim'
+" Bundle 'Shougo/neosnippet.vim'
+" Bundle 'Shougo/neosnippet-snippets.vim'
 Bundle 'bling/vim-airline'
 Bundle 'bling/vim-bufferline'
 Bundle 'gcmt/breeze.vim'
@@ -184,7 +187,8 @@ map ,c <c-_><c-_>
 "" map code completion to , + tab
 imap ,<tab> <C-x><C-o>
 
-"" map escape key to jj -- much faster
+"" map escape key to jk -- much faster
+"" also, CTRL-C
 imap jk <esc>
 
 "" set text wrapping toggles
@@ -225,7 +229,7 @@ nnoremap j gj
 nnoremap k gk
 
 "" switch buffers without saving
-"set hidden
+set hidden
 
 "" Unimpaired
 nmap <space>n ]b
@@ -270,7 +274,7 @@ au BufRead,BufNewFile *.scss set filetype=scss
 " let g:ctrlp_by_filename = 1
 
 " JS enhanced syntax
-" au FileType javascript call JavaScriptFold()
+au FileType javascript call JavaScriptFold()
 
 " Numbers
 let g:numbers_exclude = ['nerdtree']
