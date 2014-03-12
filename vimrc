@@ -2,8 +2,9 @@
 "" http://net.tutsplus.com/articles/general/top-10-pitfalls-when-switching-to-vim/
 "" https://github.com/carlhuda/janus
 "" http://xkcd.com/1172/
-"" Todo: 
+"" Todo:
 "" Break apart vimrc into distinct pieces.
+"" ALSO SET Iterm2 to report itself as xterm-256color
 "" ---------------------------------------------------------------------
 
 set rtp+=~/.vim/bundle/vundle/
@@ -25,6 +26,7 @@ Bundle 'jpalardy/vim-slime'
 Bundle 'kien/ctrlp.vim.git'
 Bundle 'majutsushi/tagbar'
 Bundle 'marijnh/tern_for_vim'
+Bundle 'mattn/emmet-vim'
 Bundle 'matze/vim-move'
 Bundle 'mhinz/vim-blockify'
 Bundle 'mhinz/vim-signify'
@@ -136,11 +138,25 @@ set ignorecase
 set smartcase
 
 "" GUI
-set t_Co=256
-let g:solarized_termtrans = 1
+" set t_Co=256
+" let g:solarized_termtrans = 1
+" colorscheme solarized
+" set guifont=Inconsolata\ for\ Powerline:h14
+" set guioptions=aAce
+" if has('gui_running')
+"   set go-=T
+"   if has("autocmd")
+"     autocmd VimEnter * wincmd p
+"   endif
+" else
+"   set mouse=a
+" endif
+
+" set t_Co=256
+" let g:solarized_termtrans = 1
 colorscheme solarized
 set guifont=Inconsolata\ for\ Powerline:h14
-set guioptions=aAce
+" set guioptions=aAce
 if has('gui_running')
   set go-=T
   if has("autocmd")
@@ -161,10 +177,9 @@ set showmode
 nnoremap <leader>q gqip
 
 "" enable code folding
-" set foldenable
-set foldmethod=indent
-set foldlevelstart=99
-set nofoldenable
+set foldenable        " enable folds
+set foldmethod=syntax " fold method
+set foldlevelstart=99 " start with folds closed
 
 "" hide mouse when typing
 set mousehide
@@ -234,7 +249,15 @@ set hidden
 "" Unimpaired
 nmap <space>n ]b
 nmap <space>p [b
-" nnoremap <C-Space> ]b
+
+" Remapping unimpaired bubbling to textmate like bubbling
+" Bubble single lines
+nmap <C-k> [e
+nmap <C-j> ]e
+
+" Bubble multiple lines
+vmap <C-k> [egv
+vmap <C-j> ]egv
 
 "" Indent Guides
 let g:indent_guides_enable_on_vim_startup = 0
@@ -249,6 +272,8 @@ let NERDTreeShowHidden=1
 
 " Airline, a powerline replacement
 let g:airline_powerline_fonts = 1
+let g:airline_section_b = '%{getcwd()}'
+let g:airline_section_c = '%t'
 
 "" Blockify
 let g:blockify_pairs = {
@@ -270,9 +295,6 @@ endif
 
 au BufRead,BufNewFile *.scss set filetype=scss
 
-"" Sup CTRL-P
-" let g:ctrlp_by_filename = 1
-
 " JS enhanced syntax
 au FileType javascript call JavaScriptFold()
 
@@ -291,22 +313,10 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-
-" Remapping unimpaired bubbling to textmate like bubbling
-" Bubble single lines
-nmap <C-k> [e
-nmap <C-j> ]e
-
-" Bubble multiple lines
-vmap <C-k> [egv
-vmap <C-j> ]egv
-
 " EasyMotion
 let g:EasyMotion_leader_key = '<Space>'
 
 " Slime
 let g:slime_target = "tmux"
 
-" Search highlighter
-hi IncSearch cterm=NONE ctermfg=white ctermbg=5
 hi Search    cterm=NONE ctermfg=white ctermbg=5
