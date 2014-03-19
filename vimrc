@@ -15,7 +15,7 @@ Bundle 'gmarik/vundle'
 
 " Plugins
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'jeetsukumaran/vim-markology'
+" Bundle 'jeetsukumaran/vim-markology'
 " Bundle 'Shougo/neocomplete.vim'
 " Bundle 'Shougo/neosnippet.vim'
 " Bundle 'Shougo/neosnippet-snippets.vim'
