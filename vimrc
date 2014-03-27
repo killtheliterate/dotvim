@@ -14,6 +14,9 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Plugins
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-commentary'
 Bundle 'Lokaltog/vim-easymotion'
 " Bundle 'jeetsukumaran/vim-markology'
 " Bundle 'Shougo/neocomplete.vim'
@@ -64,17 +67,27 @@ Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'tpope/vim-liquid'
 
 "" Basic Setup
-set nocompatible      " Use vim, no vi defaults
-set number            " Show line numbers
-set ruler             " Show line and column number
-syntax on             " Turn on syntax highlighting allowing local overrides
+set nocompatible
+set number
+syntax on
 filetype plugin indent on
-set encoding=utf-8    " Set default encoding to UTF-8
+set encoding=utf-8
 
 "" Whitespace
-set wrap
-" set nowrap                        " don't wrap lines
-set tabstop=2                     " a tab is two spaces
+set nowrap
+set tabstop=2 shiftwidth=2
+set expandtab
+set backspace=indent,eol,start
+set list
+set smartindent
+set autoindent
+set linespace=3
+set textwidth=80
+set formatoptions=qrn1
+set formatoptions+=w
+
+"" line length
+set colorcolumn=80
 
 "" Turn Off Swap Files ------------------------------------------------------
 set backupdir^=~/Dropbox/backups/vim-backups/_backup//    " where to put backup files.
@@ -83,30 +96,8 @@ set noswapfile
 set nobackup
 set nowb
 
-"" Persistent Undo ----------------------------------------------------------
-" Keep undo history across sessions, by storing in file.
-" Only works all the time.
-" TODO: This is causing the shell to behave weirdly after exiting vim.
-silent !mkdir ~/.vim/backups > /dev/null 2>&1
-set undodir=~/.vim/backups
-set undofile
-
-"" Indentation & Space ------------------------------------------------------
-set smarttab
-set shiftwidth=2
-set softtabstop=2
-set expandtab                     " use spaces, not tabs
-set list                          " Show invisible characters
-set backspace=indent,eol,start    " backspace through everything in insert mode
-
-set linespace=3
-set textwidth=78
-set formatoptions=qrn1
-set formatoptions+=w
-
-"" Indentation
-set smartindent
-set autoindent
+"" at least let yourself know what mode you're in
+set showmode
 
 " List chars
 set listchars=""                  " Reset the listchars
@@ -123,6 +114,14 @@ set ignorecase  " searches are case insensitive...
 set smartcase   " ... unless they contain at least one capital letter
 nmap <silent> ,/ :nohlsearch<CR>
 
+"" Persistent Undo ----------------------------------------------------------
+" Keep undo history across sessions, by storing in file.
+" Only works all the time.
+" TODO: This is causing the shell to behave weirdly after exiting vim.
+silent !mkdir ~/.vim/backups > /dev/null 2>&1
+set undodir=~/.vim/backups
+set undofile
+
 "" Wildcard settings
 set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
 set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
@@ -133,51 +132,6 @@ set wildignore+=*.swp,*~,._*
 let mapleader = ","
 set timeoutlen=500
 
-"" Search
-set incsearch
-set hlsearch
-set ignorecase
-set smartcase
-
-"" GUI
-" set t_Co=256
-" let g:solarized_termtrans = 1
-" colorscheme solarized
-" set guifont=Inconsolata\ for\ Powerline:h14
-" set guioptions=aAce
-" if has('gui_running')
-"   set go-=T
-"   if has("autocmd")
-"     autocmd VimEnter * wincmd p
-"   endif
-" else
-"   set mouse=a
-" endif
-
-" set t_Co=256
-" let g:solarized_termtrans = 1
-colorscheme solarized
-set guifont=Inconsolata\ for\ Powerline:h14
-" set guioptions=aAce
-if has('gui_running')
-  set go-=T
-  if has("autocmd")
-    autocmd VimEnter * wincmd p
-  endif
-else
-  set mouse=a
-endif
-
-if exists("g:enable_mvim_shift_arrow")
-  let macvim_hig_shift_movement = 1 " mvim shift-arrow-keys
-endif
-
-"" at least let yourself know what mode you're in
-set showmode
-
-"" hard-wrap paragraphs of text
-nnoremap <leader>q gqip
-
 "" enable code folding
 set foldenable        " enable folds
 set foldmethod=syntax " fold method
@@ -186,12 +140,6 @@ set foldlevelstart=99 " start with folds closed
 "" hide mouse when typing
 set mousehide
 
-"" shortcut to fold tags with leader (usually \) + ft
-nnoremap <leader>ft Vatzf
-
-"" opens a vertical split and switches over (\v)
-nnoremap <leader>v <C-w>v<C-w>l
-
 "" split windows below the current window.
 set splitbelow
 
@@ -199,20 +147,17 @@ set splitbelow
 set sessionoptions=resize,winpos,winsize,buffers,tabpages,folds,curdir,help
 
 "" faster shortcut for commenting. Requires T-Comment plugin
-map ,c <c-_><c-_>
+" map ,c <c-_><c-_>
 
 "" map code completion to , + tab
 imap ,<tab> <C-x><C-o>
 
 "" map escape key to jk -- much faster
-"" also, CTRL-C
+"" also, CTRL-C and CTRL-[]
 imap jk <esc>
 
 "" set text wrapping toggles
-nmap <silent> <leader>tw :set invwrap<CR>:set wrap?<CR>
-
-"" find merge conflict markers
-nmap <silent> <leader>fc <ESC>/\v^[<=>]{7}( .*\|$)<CR>
+" nmap <silent> <leader>tw :set invwrap<CR>:set wrap?<CR>
 
 "" window navigation
 nmap <C-h> <C-w>h
@@ -227,15 +172,10 @@ hi MatchParen cterm=bold ctermbg=darkmagenta ctermfg=white
 set clipboard=unnamed
 
 "" preserve indentation while pasting text from the OS X clipboard
-" noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
-
-"" line length
-set colorcolumn=80
+noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 
 "" spellcheck
 map <leader>ss :setlocal spell!<cr>
-
-"" shortcuts using <leader>
 map <leader>sn ]s
 map <leader>sp [s
 map <leader>sa zg
@@ -322,3 +262,21 @@ let g:EasyMotion_leader_key = '<Space>'
 let g:slime_target = "tmux"
 
 hi Search    cterm=NONE ctermfg=white ctermbg=5
+
+" Automatically wrap at 80 characters for Markdown
+autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+
+colorscheme solarized
+let g:solarized_termtrans = 1
+set guifont=Inconsolata\ for\ Powerline:h14
+if has('gui_running')
+  set go-=T
+  if has("autocmd")
+    autocmd VimEnter * wincmd p
+  endif
+else
+  set mouse=a
+endif
+
+set nobackup " write is sloooooooooo
+
