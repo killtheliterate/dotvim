@@ -3,6 +3,8 @@ This is how I deal with my editor setup. My vimrc is meant to be symlinked from 
 home directory, an obvious step of which is appending a dot to the symlink 
 name. Plugin management is handled by [Vundle](https://github.com/gmarik/vundle).
 
+
+
 ## Included plugins
 ```
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
@@ -33,7 +35,8 @@ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 ## Notes
 * To install the included plugins, run :PluginInstall
-* To install Command-T, read [this](http://blog.parkermoore.de/2014/01/02/installing-command-t-with-os-x-mavericks-built-in-vim)
+* To install Command-T, read [this](http://blog.parkermoore.de/2014/01/02/installing-command-t-with-os-x-mavericks-built-in-vim).
+* Set Iterm2 to report itself as xterm-256color.
 
 #### Drupal Notes
 * Check into https://drupal.org/node/1389448 to see drupalvim stuff

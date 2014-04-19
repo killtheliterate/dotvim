@@ -1,10 +1,5 @@
 "" I found this on the internet
-"" http://net.tutsplus.com/articles/general/top-10-pitfalls-when-switching-to-vim/
-"" https://github.com/carlhuda/janus
 "" http://xkcd.com/1172/
-"" Todo:
-"" Break apart vimrc into distinct pieces.
-"" ALSO SET Iterm2 to report itself as xterm-256color
 "" ---------------------------------------------------------------------
 
 set nocompatible
@@ -221,7 +216,8 @@ let g:syntastic_javascript_checkers = ['jshint']
 let g:EasyMotion_leader_key = '<Space>'
 
 "" Command-T
-nmap <C-p> :CommandT
+" nnoremap <silent> <Leader>t :CommandT<CR>
+" nnoremap <silent> <Leader>b :CommandTBuffer<CR>
 
 "" Colors and type------------------------------------------------------------
 set guifont=Inconsolata\ for\ Powerline:h14
