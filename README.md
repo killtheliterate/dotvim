@@ -16,26 +16,28 @@ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 * [Blockify](http://github.com/mhinz/vim-blockify)
 * [Bufferline](http://github.com/bling/vim-bufferline)
 * [Commentary](http://github.com/tpope/vim-commentary)
+* [Ctrl-P](https://github.com/kien/ctrlp.vim)
 * [Eunuch](http://github.com/tpope/vim-eunuch)
 * [Fugitive](http://github.com/tpope/vim-fugitive)
 * [Git](http://github.com/tpope/vim-git)
 * [Move](http://github.com/matze/vim-move)
 * [Numbers](http://github.com/myusuf3/numbers.vim)
 * [Repeat](http://github.com/tpope/vim-repeat)
+* [Reveal In Finder](https://github.com/henrik/vim-reveal-in-finder)
 * [Sensible](http://github.com/tpope/vim-sensible)
 * [Signify](http://github.com/mhinz/vim-signify)
+* [Startify](https://github.com/mhinz/vim-startify)
 * [Surround](http://github.com/tpope/vim-surround)
 * [Syntastic](http://github.com/scrooloose/syntastic)
 * [Unimpaired](http://github.com/tpope/vim-unimpaired)
+* [Vimux](https://github.com/benmills/vimux)
 * [Vinegar](http://github.com/tpope/vim-vinegar)
 * [Vitality](http://github.com/sjl/vitality.vim)
 * [tComment](http://github.com/tomtom/tcomment_vim)
-* [Vimux](https://github.com/benmills/vimux)
 * Misc syntaxes and stuff
 
 ## Notes
 * To install the included plugins, run :PluginInstall
-* To install Command-T, read [this](http://blog.parkermoore.de/2014/01/02/installing-command-t-with-os-x-mavericks-built-in-vim).
 * Set Iterm2 to report itself as xterm-256color.
 
 #### Drupal Notes
