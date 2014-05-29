@@ -131,6 +131,7 @@ set mousehide
 
 "" split windows below the current window.
 set splitbelow
+set splitright
 
 "" session settings
 set sessionoptions=resize,winpos,winsize,buffers,tabpages,folds,curdir,help
@@ -219,16 +220,22 @@ let g:syntastic_javascript_checkers = ['jshint']
 "" EasyMotion
 let g:EasyMotion_leader_key = '<Space>'
 
-"" Command-T
-" nnoremap <silent> <Leader>t :CommandT<CR>
-" nnoremap <silent> <Leader>b :CommandTBuffer<CR>
-
 "" Colors and type------------------------------------------------------------
-set guifont=Inconsolata\ for\ Powerline:h14
+" set guifont=Inconsolata\ for\ Powerline:h14
+set anti enc=utf-8
+set guifont=Source\ Code\ Pro\ for\ Powerline\ 13
 colorscheme solarized
 if has('gui_running')
   set go-=T
 endif
 
+" Reveal
+map <leader>e :Reveal<cr>
+
 "" Vimux
 map <Leader>js :call VimuxRunCommand("clear; node " . bufname("%"))<CR>
+
+"" Startify
+let g:startify_custom_header = map(split(system('figlet -f isometric2 "DOOM"'), '\n'), '"   ". v:val') + ['','']
+let g:startify_custom_footer = map(split(system('fortune | cowsay'), '\n'), '"   ". v:val') + ['','']
+
