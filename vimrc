@@ -5,8 +5,8 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
 
 " Let Vundle manage Vundle
 Bundle 'gmarik/vundle'
@@ -47,6 +47,8 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'tpope/vim-haml'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'tpope/vim-liquid'
+
+call vundle#end() 
 
 "" basics
 filetype plugin indent on
