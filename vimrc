@@ -212,16 +212,10 @@ au FileType javascript call JavaScriptFold()
 let g:numbers_exclude = ['nerdtree']
 
 "" Syntastic
-let g:syntastic_enable_signs=1
 let g:syntastic_auto_jump=0
-let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
-let g:syntastic_javascript_checkers = ['jshint']
-
-"" EasyMotion
-let g:EasyMotion_leader_key = '<Space>'
+let g:syntastic_enable_signs=1
 
 "" Colors and type------------------------------------------------------------
-" set guifont=Inconsolata\ for\ Powerline:h14
 set anti enc=utf-8
 set guifont=Source\ Code\ Pro\ for\ Powerline\ 13
 colorscheme solarized
