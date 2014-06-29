@@ -9,9 +9,10 @@ set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
 " Let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " Plugins
+Plugin 'editorconfig/editorconfig-vim'
 Plugin 'benmills/vimux'
 Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
@@ -40,15 +41,18 @@ Plugin 'tpope/vim-vinegar'
 Plugin 'altercation/vim-colors-solarized'
 
 " Syntax
-Plugin 'nono/vim-handlebars'
-Plugin 'groenewege/vim-less'
 Plugin 'beyondwords/vim-twig'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'tpope/vim-haml'
 Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'groenewege/vim-less'
+Plugin 'nono/vim-handlebars'
+Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-liquid'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'pangloss/vim-javascript'
 
-call vundle#end() 
+
+call vundle#end()
 
 "" basics
 filetype plugin indent on
@@ -89,7 +93,7 @@ set showmode
 
 "" display things like newlines, carriage returns, whitespace, etc...
 set listchars=""
-set listchars+=tab:▸\
+set listchars+=tab:..
 " set listchars+=eol:¬
 set listchars+=trail:.
 " set listchars+=extends:>
@@ -205,9 +209,6 @@ let g:blockify_pairs = {
       \ 'php.drupal': [ '{', '}' ],
       \}
 
-"" JS enhanced syntax
-au FileType javascript call JavaScriptFold()
-
 "" Numbers
 let g:numbers_exclude = ['nerdtree']
 
@@ -233,3 +234,5 @@ map <Leader>js :call VimuxRunCommand("clear; node " . bufname("%"))<CR>
 let g:startify_custom_header = map(split(system('figlet -f isometric2 "DOOM"'), '\n'), '"   ". v:val') + ['','']
 let g:startify_custom_footer = map(split(system('fortune | cowsay'), '\n'), '"   ". v:val') + ['','']
 
+"" JS enhanced syntax
+au FileType javascript call JavaScriptFold()
