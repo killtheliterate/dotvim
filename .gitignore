@@ -1,3 +1,7 @@
 .netrwhist
+.netrwbook
 
 /backups
+
+/bundle/*
+!/bundle/Vundle.vim

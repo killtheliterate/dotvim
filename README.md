@@ -20,8 +20,10 @@ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 * [Eunuch](http://github.com/tpope/vim-eunuch)
 * [Fugitive](http://github.com/tpope/vim-fugitive)
 * [Git](http://github.com/tpope/vim-git)
+* [JS Context Coloring](https://github.com/bigfish/vim-js-context-coloring)
 * [Move](http://github.com/matze/vim-move)
 * [Numbers](http://github.com/myusuf3/numbers.vim)
+* [Rainbow Parentheses](http://github.com/kien/rainbow_parentheses.vim)
 * [Repeat](http://github.com/tpope/vim-repeat)
 * [Reveal In Finder](https://github.com/henrik/vim-reveal-in-finder)
 * [Sensible](http://github.com/tpope/vim-sensible)
@@ -38,6 +40,10 @@ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 ## Notes
 * To install the included plugins, run :PluginInstall
+* To install JavaScript context highlight, run `npm install` from 
+  /bundle/vim-js-context-coloring. This plugin is disabled by default, and 
+  should instead have a hotkey set up to toggle betweet syntax and context 
+  coloring.
 * Set Iterm2 to report itself as xterm-256color.
 
 #### Drupal Notes

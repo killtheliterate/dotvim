@@ -9,16 +9,18 @@ set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
 " Let Vundle manage Vundle
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " Plugins
-Plugin 'editorconfig/editorconfig-vim'
 Plugin 'benmills/vimux'
+Plugin 'bigfish/vim-js-context-coloring'
 Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
+Plugin 'editorconfig/editorconfig-vim'
 Plugin 'henrik/vim-reveal-in-finder'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'kien/ctrlp.vim'
+Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'matze/vim-move'
 Plugin 'mhinz/vim-blockify'
 Plugin 'mhinz/vim-signify'
@@ -236,3 +238,15 @@ let g:startify_custom_footer = map(split(system('fortune | cowsay'), '\n'), '"  
 
 "" JS enhanced syntax
 au FileType javascript call JavaScriptFold()
+
+"" Rainbow Parens
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+"" Context coloring
+" Context coloring is disabled by default, so toggle it on with :JSContextColorToggle
+let g:js_context_colors_show_error_message = 1
+let g:js_context_colors_insertmode = 0
+let g:js_context_colors_enabled = 0
