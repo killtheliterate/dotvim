@@ -10,6 +10,7 @@ name. Plugin management is handled by [Vundle](https://github.com/gmarik/vundle)
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 ```
 
+* [indentLine](http://github.com/Yggdroot/indentLine)
 * [Ack](http://github.com/mileszs/ack.vim)
 * [Airline](http://github.com/bling/vim-airline)
 * [Auto Pairs](http://github.com/jiangmiao/auto-pairs)
@@ -40,13 +41,8 @@ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 ## Notes
 * To install the included plugins, run :PluginInstall
-* To install JavaScript context highlight, run `npm install` from 
+* To install JavaScript context coloring, run `npm install` from 
   /bundle/vim-js-context-coloring. This plugin is disabled by default, and 
   should instead have a hotkey set up to toggle betweet syntax and context 
   coloring.
 * Set Iterm2 to report itself as xterm-256color.
-
-#### Drupal Notes
-* Check into https://drupal.org/node/1389448 to see drupalvim stuff
-* Install drupalvim with Drush
-* Install phpcs and set Drupal as default syntax

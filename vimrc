@@ -12,6 +12,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Plugins
+" Plugin 'Yggdroot/indentLine'
 Plugin 'benmills/vimux'
 Plugin 'bigfish/vim-js-context-coloring'
 Plugin 'bling/vim-airline'
@@ -45,13 +46,14 @@ Plugin 'altercation/vim-colors-solarized'
 " Syntax
 Plugin 'beyondwords/vim-twig'
 Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'derekwyatt/vim-scala'
 Plugin 'groenewege/vim-less'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'kchmck/vim-coffee-script'
 Plugin 'nono/vim-handlebars'
+Plugin 'pangloss/vim-javascript'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-liquid'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'pangloss/vim-javascript'
 
 
 call vundle#end()
@@ -70,13 +72,9 @@ set expandtab
 set backspace=indent,eol,start
 set list
 set autoindent
-set linespace=3
 set formatoptions=qrn1
 set formatoptions+=w
 set cursorline
-
-" highlight NonText guifg=#4a4a59
-" highlight SpecialKey guifg=#4a4a59
 
 "" show where line ends
 "" use gq to apply formatting
@@ -95,15 +93,13 @@ set showmode
 
 "" display things like newlines, carriage returns, whitespace, etc...
 set listchars=""
-set listchars+=tab:..
+set listchars+=tab:\┆\ 
 " set listchars+=eol:¬
 set listchars+=trail:.
-" set listchars+=extends:>
-" set listchars+=precedes:<
+set listchars+=extends:→
+set listchars+=precedes:←
 
-" ☠
-" ❤
-
+" ❤ ☠ ⚒ ☞ ☛ ☚ ☜ » « ☹ → ← ⚔
 "" search settings
 set hlsearch
 set incsearch
@@ -127,10 +123,11 @@ set wildignore+=*.swp,*~,._*
 let mapleader = ","
 set timeoutlen=500
 
+set nofoldenable
 "" enable code folding
-set foldenable
-set foldmethod=syntax
-set foldlevelstart=99
+" set foldenable
+" set foldmethod=syntax
+" set foldlevelstart=99
 
 "" hide mouse when typing
 set mousehide
@@ -220,7 +217,7 @@ let g:syntastic_enable_signs=1
 
 "" Colors and type------------------------------------------------------------
 set anti enc=utf-8
-set guifont=Source\ Code\ Pro\ for\ Powerline\ 13
+set guifont=Source\ Code\ Pro\ for\ Powerline:h13
 colorscheme solarized
 if has('gui_running')
   set go-=T
@@ -240,13 +237,28 @@ let g:startify_custom_footer = map(split(system('fortune | cowsay'), '\n'), '"  
 au FileType javascript call JavaScriptFold()
 
 "" Rainbow Parens
+let g:rbpt_max = 16
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+let g:rbpt_colorpairs = [
+  \ [ '13', '#6c71c4'],
+  \ [ '5',  '#d33682'],
+  \ [ '1',  '#dc322f'],
+  \ [ '9',  '#cb4b16'],
+  \ [ '3',  '#b58900'],
+  \ [ '2',  '#859900'],
+  \ [ '6',  '#2aa198'],
+  \ [ '4',  '#268bd2'],
+  \ ]
 
 "" Context coloring
 " Context coloring is disabled by default, so toggle it on with :JSContextColorToggle
 let g:js_context_colors_show_error_message = 1
 let g:js_context_colors_insertmode = 0
 let g:js_context_colors_enabled = 0
+
+"" indentLine
+" ┆ ¦ │ ︙
+let g:indentLine_char="┆"
