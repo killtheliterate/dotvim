@@ -7,7 +7,7 @@ name. Plugin management is handled by [Vundle](https://github.com/gmarik/vundle)
 
 ## Included plugins
 ```
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
 ```
 
 * [indentLine](http://github.com/Yggdroot/indentLine)

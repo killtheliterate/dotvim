@@ -1,65 +1,83 @@
 "" I found this on the internet
 "" http://xkcd.com/1172/
 "" ---------------------------------------------------------------------
-
-set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#begin()
+if !1 | finish | endif
 
-" Let Vundle manage Vundle
-Plugin 'gmarik/Vundle.vim'
+if has('vim_starting')
+  set nocompatible
+  set runtimepath+=/Users/gdawson/.vim/bundle/neobundle.vim/
+endif
 
-" Plugins
-" Plugin 'Yggdroot/indentLine'
-Plugin 'benmills/vimux'
-Plugin 'bigfish/vim-js-context-coloring'
-Plugin 'bling/vim-airline'
-Plugin 'bling/vim-bufferline'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'henrik/vim-reveal-in-finder'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'kien/ctrlp.vim'
-Plugin 'kien/rainbow_parentheses.vim'
-Plugin 'matze/vim-move'
-Plugin 'mhinz/vim-blockify'
-Plugin 'mhinz/vim-signify'
-Plugin 'mhinz/vim-startify'
-Plugin 'mileszs/ack.vim'
-Plugin 'myusuf3/numbers.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'sjl/vitality.vim'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-eunuch'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-git'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-sensible'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'tpope/vim-vinegar'
+call neobundle#begin(expand('/Users/gdawson/.vim/bundle'))
+
+" Let NeoBundle manage NeoBundle
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+NeoBundle 'benmills/vimux'
+NeoBundle 'bigfish/vim-js-context-coloring'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'bling/vim-bufferline'
+NeoBundle 'editorconfig/editorconfig-vim'
+NeoBundle 'henrik/vim-reveal-in-finder'
+NeoBundle 'jiangmiao/auto-pairs'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'kien/rainbow_parentheses.vim'
+NeoBundle 'matze/vim-move'
+NeoBundle 'mhinz/vim-blockify'
+NeoBundle 'mhinz/vim-signify'
+NeoBundle 'mhinz/vim-startify'
+NeoBundle 'mileszs/ack.vim'
+NeoBundle 'myusuf3/numbers.vim'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'sjl/vitality.vim'
+NeoBundle 'tpope/vim-commentary'
+NeoBundle 'tpope/vim-eunuch'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-git'
+NeoBundle 'tpope/vim-repeat'
+NeoBundle 'tpope/vim-sensible'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-unimpaired'
+NeoBundle 'tpope/vim-vinegar'
+
+" NeoBundle 'Shougo/unite.vim'
+" NeoBundle 'Shougo/neomru.vim'
+
+" Uh, more plugins
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make -f make_mac.mak',
+\     'unix' : 'make -f make_unix.mak',
+\    },
+\ }
 
 " Colors
-Plugin 'altercation/vim-colors-solarized'
+NeoBundle 'altercation/vim-colors-solarized'
 
 " Syntax
-Plugin 'beyondwords/vim-twig'
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'derekwyatt/vim-scala'
-Plugin 'groenewege/vim-less'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'nono/vim-handlebars'
-Plugin 'pangloss/vim-javascript'
-Plugin 'tpope/vim-haml'
-Plugin 'tpope/vim-liquid'
+NeoBundle 'beyondwords/vim-twig'
+NeoBundle 'cakebaker/scss-syntax.vim'
+NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'groenewege/vim-less'
+NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'nono/vim-handlebars'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'tpope/vim-haml'
+NeoBundle 'tpope/vim-liquid'
 
+" Required:
+call neobundle#end()
 
-call vundle#end()
-
-"" basics
+" Required:
 filetype plugin indent on
+
+NeoBundleCheck
+
 set number
 syntax on
 set encoding=utf-8
