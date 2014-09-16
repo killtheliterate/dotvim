@@ -3,21 +3,22 @@ This is how I deal with my editor setup. My vimrc is meant to be symlinked from 
 home directory, an obvious step of which is appending a dot to the symlink 
 name. Plugin management is handled by [Vundle](https://github.com/gmarik/vundle).
 
-
+### Also.
+```
+brew install macvim --with-cscope --with-lua --override-system-vim
+```
 
 ## Included plugins
 ```
 curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
 ```
 
-* [indentLine](http://github.com/Yggdroot/indentLine)
 * [Ack](http://github.com/mileszs/ack.vim)
 * [Airline](http://github.com/bling/vim-airline)
 * [Auto Pairs](http://github.com/jiangmiao/auto-pairs)
 * [Blockify](http://github.com/mhinz/vim-blockify)
 * [Bufferline](http://github.com/bling/vim-bufferline)
 * [Commentary](http://github.com/tpope/vim-commentary)
-* [Ctrl-P](https://github.com/kien/ctrlp.vim)
 * [Eunuch](http://github.com/tpope/vim-eunuch)
 * [Fugitive](http://github.com/tpope/vim-fugitive)
 * [Git](http://github.com/tpope/vim-git)
@@ -32,11 +33,11 @@ curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.s
 * [Startify](https://github.com/mhinz/vim-startify)
 * [Surround](http://github.com/tpope/vim-surround)
 * [Syntastic](http://github.com/scrooloose/syntastic)
+* [tComment](http://github.com/tomtom/tcomment_vim)
 * [Unimpaired](http://github.com/tpope/vim-unimpaired)
-* [Vimux](https://github.com/benmills/vimux)
+* [Unite](http://github.com/Shougo/unite.vim)
 * [Vinegar](http://github.com/tpope/vim-vinegar)
 * [Vitality](http://github.com/sjl/vitality.vim)
-* [tComment](http://github.com/tomtom/tcomment_vim)
 * Misc syntaxes and stuff
 
 ## Notes
