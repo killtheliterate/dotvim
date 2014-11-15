@@ -7,10 +7,10 @@ if !1 | finish | endif
 
 if has('vim_starting')
   set nocompatible
-  set runtimepath+=/Users/gdawson/.vim/bundle/neobundle.vim/
+  set runtimepath+=$HOME/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#begin(expand('/Users/gdawson/.vim/bundle'))
+call neobundle#begin(expand('$HOME/.vim/bundle'))
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -20,11 +20,9 @@ NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'bling/vim-bufferline'
-" NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'henrik/vim-reveal-in-finder'
 NeoBundle 'jiangmiao/auto-pairs'
-" NeoBundle 'kana/vim-arpeggio'
 NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'matze/vim-move'
 NeoBundle 'justinmk/vim-matchparenalways'
@@ -133,13 +131,12 @@ nmap <silent> <Space>c :nohlsearch<CR>
 hi Search    cterm=NONE ctermfg=white ctermbg=5
 
 "" undo forever and ever
-silent !mkdir -p $HOME/.vim/backups > /dev/null 2>&1
+let s:vim_cache = expand('$HOME/.vim/backups')
+if filewritable(s:vim_cache) == 0 && exists("*mkdir")
+    call mkdir(s:vim_cache, "p", 0777)
+endif
 set undodir=$HOME/.vim/backups
 set undofile
-" let s:vim_cache = expand('$HOME/.vim/backups')
-" if filewritable(s:vim_cache) == 0 && exists("*mkdir")
-"     call mkdir(s:vim_cache, "p", 0777)
-" endif
 
 "" wildcard settings
 set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
@@ -148,7 +145,6 @@ set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
 set wildignore+=*.swp,*~,._*
 
 "" set <leader> to ,
-" let mapleader = ","
 let mapleader = "\<Space>"
 set timeoutlen=500
 
@@ -172,23 +168,6 @@ set sessionoptions=resize,winpos,winsize,buffers,tabpages,folds,curdir,help
 " also, <C-c> and <C-[>
 imap jk <esc>
 
-"" window navigation
-" nmap <leader>h <C-w>h
-" nmap <leader>j <C-w>j
-" nmap <leader>k <C-w>k
-" nmap <leader>l <C-w>l
-" nmap <C-a>h <C-w>h
-" nmap <C-a>j <C-w>j
-" nmap <C-a>l <C-w>l
-" nmap <C-a>k <C-w>k
-
-" let g:tmux_navigator_no_mappings = 1
-" nnoremap <silent> <C-a>h :TmuxNavigateLeft<cr>
-" nnoremap <silent> <C-a>j :TmuxNavigateDown<cr>
-" nnoremap <silent> <C-a>k :TmuxNavigateUp<cr>
-" nnoremap <silent> <C-a>l :TmuxNavigateRight<cr>
-" nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
-
 "" highlight brackets
 hi MatchParen cterm=bold ctermbg=darkmagenta ctermfg=white
 
@@ -210,14 +189,10 @@ nnoremap k gk
 set hidden
 
 "" bubble single lines
-" nmap <leader>k [e
-" nmap <leader>j ]e
 nmap <C-k> [e
 nmap <C-j> ]e
 
 "" bubble multiple lines
-" vmap <leader>k [egv
-" vmap <leader>j ]egv
 vmap <C-k> [egv
 vmap <C-j> ]egv
 
@@ -355,19 +330,19 @@ call unite#custom_source('file_rec,file_rec/async,file_mru,file,buffer,grep',
 
 " File finder
 " This is a POS - consider using file_rec/git
-nnoremap <leader>f :<C-u>Unite -resume -buffer-name=files file_rec/async:!<CR><End><C-U>
-
-" MRU
-nnoremap <leader>r :<C-u>Unite -resume -buffer-name=recent file_mru<CR><End><C-U>
-
-" Buffers
-nnoremap <leader>b :<C-u>Unite -resume -buffer-name=buffers buffer<CR><End><C-U>
+nnoremap <leader>a :<C-u>Unite -resume -buffer-name=files file_rec/async:!<CR><End><C-U>
 
 " File searcher
 nnoremap <leader>s :<C-u>Unite -resume -buffer-name=search grep:.<CR><End><C-U>
 
+" MRU
+nnoremap <leader>d :<C-u>Unite -resume -buffer-name=recent file_mru<CR><End><C-U>
+
+" Buffers
+nnoremap <leader>f :<C-u>Unite -resume -buffer-name=buffers buffer<CR><End><C-U>
+
 " Yanks searcher
-nnoremap <leader>y :<C-u>Unite -resume -buffer-name=history history/yank<CR><End><C-U>
+nnoremap <leader>g :<C-u>Unite -resume -buffer-name=history history/yank<CR><End><C-U>
 
 " Custom mappings for the unite buffer
 autocmd FileType unite call s:unite_settings()
